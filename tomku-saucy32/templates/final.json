@@ -20,7 +20,7 @@
     "builders": [
     {
         "type": "virtualbox-ovf",
-        "source_path": "output-virtualbox-iso/vagrant-saucy.ovf",
+        "source_path": "output-virtualbox-iso/saucy32.ovf",
         "headless": true,
         "ssh_username": "vagrant",
         "ssh_password": "vagrant",
