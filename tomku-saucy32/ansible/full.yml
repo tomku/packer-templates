@@ -1,0 +1,34 @@
+---
+- hosts: all
+  sudo: True
+  remote_user: root
+  vars:
+    interactive_user: vagrant
+  roles:
+    - dev-utils
+    - dotfiles
+    - postgresql-server
+    - mongodb-server
+    - nginx-server
+    - uwsgi-server
+    - redis-server
+    - jvm-dev
+    - python-dev
+    - ruby-dev
+    - llvm-dev
+    - nodejs-dev
+    - haskell-dev
+    - r-dev
+    - erlang-dev
+    - go-dev
+    - rust-dev
+    - ocaml-dev
+    - io-dev
+    - elixir-dev
+    - julia-dev
+    - mozart-dev
+    - prolog-dev
+    - racket-dev
+    - lisp-dev
+    - lua-dev
+    - zero-disk

@@ -1,0 +1,3 @@
+[submodule "tomku-saucy32/ansible/roles"]
+	path = tomku-saucy32/ansible/roles
+	url = git@github.com:tomku/ansible-roles.git

@@ -1,0 +1,45 @@
+{
+    "variables": {
+        "spec": null
+    },
+    "provisioners": [
+    {
+        "type": "shell",
+        "inline": ["mkdir /tmp/packer-provisioner-ansible-local"]
+    },
+    {
+        "type": "file",
+        "source": "ansible/roles",
+        "destination": "/tmp/packer-provisioner-ansible-local"
+    },
+    {
+        "type": "ansible-local",
+        "playbook_file": "ansible/{{ user `spec` }}.yml"
+    }
+    ],
+    "builders": [
+    {
+        "type": "virtualbox-ovf",
+        "source_path": "output-virtualbox-iso/vagrant-saucy.ovf",
+        "headless": true,
+        "ssh_username": "vagrant",
+        "ssh_password": "vagrant",
+        "ssh_port": 22,
+        "ssh_key_path": "/home/tom/.vagrant.d/insecure_private_key",
+        "ssh_wait_timeout": "30s",
+        "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
+        "vm_name": "vagrant-saucy",
+        "vboxmanage": [
+            [ "modifyvm", "{{.Name}}", "--memory", "768" ], 
+            [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
+        ]
+    } 
+    ],
+    "post-processors": [
+    {
+        "type": "vagrant",
+        "keep_input_artifact": false,
+        "output": "tomku-saucy32-{{ user `spec` }}.box"
+    }
+    ]
+}

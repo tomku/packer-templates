@@ -1,0 +1,15 @@
+---
+- hosts: all
+  sudo: True
+  remote_user: root
+  vars:
+    interactive_user: vagrant
+  roles:
+    - dev-utils
+    - dotfiles
+    - postgresql-server
+    - mongodb-server
+    - redis-server
+    - ruby-dev
+    - nodejs-dev
+    - zero-disk

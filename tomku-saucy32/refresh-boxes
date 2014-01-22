@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for BOX in "$@"; do
+    if [ -f "$BOX" ] ; then
+        BOX_NAME=$(basename "$BOX" .box)
+        vagrant box remove "$BOX_NAME" virtualbox
+        vagrant box add "$BOX_NAME" "$BOX"
+    fi
+done

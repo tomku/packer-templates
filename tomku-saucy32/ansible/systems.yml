@@ -1,0 +1,16 @@
+---
+- hosts: all
+  sudo: True
+  remote_user: root
+  vars:
+    interactive_user: vagrant
+  roles:
+    - dev-utils
+    - dotfiles
+    - llvm-dev
+    - nodejs-dev
+    - erlang-dev
+    - go-dev
+    - rust-dev
+    - elixir-dev
+    - zero-disk
