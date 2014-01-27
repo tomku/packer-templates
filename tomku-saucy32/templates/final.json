@@ -9,12 +9,12 @@
     },
     {
         "type": "file",
-        "source": "ansible/roles",
+        "source": "../ansible/roles",
         "destination": "/tmp/packer-provisioner-ansible-local"
     },
     {
         "type": "ansible-local",
-        "playbook_file": "ansible/{{ user `spec` }}.yml"
+        "playbook_file": "../ansible/{{ user `spec` }}.yml"
     }
     ],
     "builders": [
