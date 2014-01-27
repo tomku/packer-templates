@@ -1,0 +1,13 @@
+---
+- hosts: all
+  sudo: True
+  remote_user: root
+  vars:
+    interactive_user: vagrant
+  roles:
+    - ansible-reload
+    - dev-utils
+    - dotfiles
+    - couchdb-server
+    - nodejs-dev
+    - zero-disk
