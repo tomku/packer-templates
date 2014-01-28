@@ -1,5 +1,0 @@
-#!/bin/sh
-
-for spec in "$@"; do
-    packer build -var "spec=$spec" templates/final.json
-done

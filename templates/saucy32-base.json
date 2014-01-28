@@ -11,7 +11,7 @@
             "scripts/cleanup.sh"
             ],
         "override": {
-            "virtualbox-iso": {
+            "saucy32-base": {
                 "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'"
             }
         }
@@ -20,6 +20,7 @@
     "builders": [
     {
         "type": "virtualbox-iso",
+        "name": "saucy32-base",
         "boot_command": [
             "<esc><esc><enter><wait>",
             "/install/vmlinuz noapic preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg <wait>",

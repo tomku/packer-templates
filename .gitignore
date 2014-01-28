@@ -1,4 +1,4 @@
-*/*.box
-*/output-*
-**/.vagrant
-**/packer_cache
+*.box
+output-*
+.vagrant
+packer_cache
