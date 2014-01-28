@@ -11,7 +11,7 @@ Please note that this repository uses a Git submodule to point to my collection 
 
 ## Future Plans
 
-- More Ubuntu boxes (32/64-bit Precise, Saucy, Tahr)
+- More Ubuntu boxes (64-bit Precise, Tahr)
 - Maybe Debian/CentOS boxes?
 
 ## Special Thanks
