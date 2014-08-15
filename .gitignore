@@ -2,3 +2,4 @@
 output-*
 .vagrant
 packer_cache
+Vagrantfile
