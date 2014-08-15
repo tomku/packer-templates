@@ -11,8 +11,9 @@ Please note that this repository uses a Git submodule to point to my collection 
 
 ## Future Plans
 
-- More Ubuntu boxes (64-bit Precise, Tahr)
 - Maybe Debian/CentOS boxes?
+- More software (including but not limited to Coq, Idris, Elm, Neo4j, MySQL).
+- Ansible modules for OPAM, Cabal, Conda, Julia, Racket, R packaging.
 
 ## Special Thanks
 
