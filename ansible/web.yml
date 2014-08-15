@@ -5,8 +5,6 @@
   vars:
     interactive_user: vagrant
   roles:
-    - dev-utils
-    - dotfiles
     - postgresql-server
     - mongodb-server
     - nginx-server

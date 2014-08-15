@@ -1,6 +1,7 @@
 {
     "variables": {
-        "spec": null
+        "platform": null,
+        "name": null
     },
     "provisioners": [
     {
@@ -14,13 +15,14 @@
     },
     {
         "type": "ansible-local",
-        "playbook_file": "ansible/{{ user `spec` }}.yml"
+        "playbook_file": "ansible/personalize.yml"
     }
     ],
     "builders": [
     {
+        "name": "{{ user `name` }-{{ user `platform` }}",
         "type": "virtualbox-ovf",
-        "source_path": "output-saucy64-base/saucy64.ovf",
+        "source_path": "output-{{ user `platform` }}/{{ user `platform` }}.ovf",
         "headless": true,
         "ssh_username": "vagrant",
         "ssh_password": "vagrant",
@@ -28,18 +30,18 @@
         "ssh_key_path": "/home/tom/.vagrant.d/insecure_private_key",
         "ssh_wait_timeout": "30s",
         "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
-        "vm_name": "saucy64-{{ user `spec` }}",
+        "vm_name": "{{ user `name` }}-{{ user `platform` }}",
         "vboxmanage": [
-            [ "modifyvm", "{{.Name}}", "--memory", "768" ], 
+            [ "modifyvm", "{{.Name}}", "--memory", "768" ],
             [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
         ]
-    } 
+    }
     ],
     "post-processors": [
     {
         "type": "vagrant",
-        "keep_input_artifact": false,
-        "output": "tomku-saucy64-{{ user `spec` }}.box"
+        "keep_input_artifact": true,
+        "output": "{{ user `name` }}-{{ user `platform` }}.box"
     }
     ]
 }

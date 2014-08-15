@@ -1,6 +1,6 @@
 #!/bin/sh
 
-rel=$1; shift
+platform=$1; shift
 for spec in "$@"; do
-    packer build -var "spec=$spec" templates/$rel-final.json
+    packer build -var "name=tomku" -var "platform=$platform" -var "spec=$spec" templates/spec.json
 done

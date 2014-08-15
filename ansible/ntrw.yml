@@ -5,8 +5,6 @@
   vars:
     interactive_user: vagrant
   roles:
-    - dev-utils
-    - dotfiles
     - couchdb-server
     - nodejs-dev
     - zero-disk

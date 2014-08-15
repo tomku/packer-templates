@@ -4,31 +4,43 @@
   remote_user: root
   vars:
     interactive_user: vagrant
+    accepted_oracle_license: true
+    jdk_version: 8
   roles:
+    # - mozart-dev
     - dev-utils
     - dotfiles
-    - postgresql-server
-    - mongodb-server
-    - nginx-server
-    - uwsgi-server
-    - redis-server
-    - jvm-dev
-    - python-dev
-    - ruby-dev
-    - llvm-dev
-    - nodejs-dev
-    - haskell-dev
-    - r-dev
+    - ansible-reload
+    - clojure-dev
+    - couchdb-server
+    - docker
+    - elasticsearch-server
+    - elixir-dev
     - erlang-dev
     - go-dev
-    - rust-dev
-    - ocaml-dev
+    - groovy-dev
+    - haskell-dev
     - io-dev
-    - elixir-dev
+    - java-dev
+    - jruby-dev
     - julia-dev
-    - mozart-dev
-    - prolog-dev
-    - racket-dev
     - lisp-dev
+    - llvm-dev
     - lua-dev
+    - mongodb-server
+    - nginx-server
+    - nodejs-dev
+    - ocaml-dev
+    - oracle-jdk
+    - postgresql-server
+    - prolog-dev
+    - python-dev
+    - racket-dev
+    - r-dev
+    - redis-server
+    - ruby-dev
+    - rust-dev
+    - scala-dev
+    - serf-agent
+    - uwsgi-server
     - zero-disk

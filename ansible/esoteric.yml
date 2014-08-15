@@ -5,12 +5,9 @@
   vars:
     interactive_user: vagrant
   roles:
-    - dev-utils
-    - dotfiles
     - postgresql-server
     - redis-server
     - io-dev
-    - mozart-dev
     - prolog-dev
     - racket-dev
     - lisp-dev

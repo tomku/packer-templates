@@ -5,10 +5,8 @@
   vars:
     interactive_user: vagrant
   roles:
-    - llvm-dev
-    - nodejs-dev
-    - erlang-dev
-    - go-dev
-    - rust-dev
-    - elixir-dev
+    - dev-utils
+    - dotfiles
+    - ansible-reload
+    - docker
     - zero-disk

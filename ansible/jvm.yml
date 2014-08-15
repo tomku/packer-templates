@@ -4,11 +4,16 @@
   remote_user: root
   vars:
     interactive_user: vagrant
+    accepted_oracle_license: true
+    jdk_version: 8
   roles:
-    - dev-utils
-    - dotfiles
     - postgresql-server
     - mongodb-server
     - redis-server
-    - jvm-dev
+    - oracle-jdk
+    - clojure-dev
+    - scala-dev
+    - java-dev
+    - groovy-dev
+    - jruby-dev
     - zero-disk
