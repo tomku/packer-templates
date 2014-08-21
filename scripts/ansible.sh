@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pip install ansible==1.6.10
+pip install ansible
